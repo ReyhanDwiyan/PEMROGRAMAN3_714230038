@@ -1,12 +1,14 @@
-import { TableWithStripedRows } from "../components/molecules/TableWithStripedRows";
+import { TypographyAtom } from "../components/atoms/TypographyAtom";
 
-export default function Dashboard() {
-return (
-    <div className="p-6">
-    <h1 className="text-2xl font-bold text-blue-gray-700 mb-4">
-        Contoh Fetch Data
-    </h1>
-    <TableWithStripedRows />
-    </div>
-);
+export function Dashboard() {
+    return (
+        <div className="p-6">
+            <TypographyAtom variant="h4" className="mb-6">
+                Dashboard Home
+            </TypographyAtom>
+            <TypographyAtom variant="paragraph">
+                Ini halaman dashboard utama.
+            </TypographyAtom>
+        </div>
+    );
 }

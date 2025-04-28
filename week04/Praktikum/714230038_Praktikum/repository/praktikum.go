@@ -98,5 +98,5 @@ func DeleteMahasiswa(ctx context.Context, npm int) (deletedNPM int, err error) {
 	if result.DeletedCount == 0 {
 		return 0, fmt.Errorf("tidak ada data yang dihapus untuk NPM %v", npm)
 	}
-	return npm, nil
+	return npm, nil
 }
