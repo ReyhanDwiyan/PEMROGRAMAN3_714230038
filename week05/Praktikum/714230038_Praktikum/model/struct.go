@@ -24,3 +24,14 @@ type MataKuliah struct {
 	Nama  string `bson:"nama" json:"nama"`
 	Nilai int    `bson:"nilai" json:"nilai"`
 }
+
+type UserLogin struct {
+	Username string `json:"username" bson:"username"`
+	Password string `json:"password" bson:"password"`
+	Role     string `json:"role" bson:"role"`
+}
+
+type Payload struct {
+	User string `json:"user"`
+	Role string `json:"role"`
+}

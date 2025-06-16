@@ -16,7 +16,9 @@ export function EditMahasiswaPage() {
                 const data = await getMahasiswaByNpm(npm);
                 setInitialData(data);
             } catch (err) {
-                Swal.fire("Error", "Gagal mengambil data mahasiswa.", "error");
+                const errorMessage =
+                    err.response?.data?.error || "Gagal memperbaharui data mahasiswa.";
+                Swal.fire("Error", errorMessage, "error");
             }
         }
         fetchData();
